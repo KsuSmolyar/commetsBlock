@@ -1,0 +1,194 @@
+body {
+	background-color: #c2b9b9;
+}
+
+.bodyWrapper {
+	margin: 10px auto;
+	max-width: 1440px;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	display: grid;
+	gap: 30px;
+	grid-template-rows: 3fr 1fr;
+	height: 100vh;
+	max-width: 800px;
+	width: 100%;
+	border-radius: 13px;
+	background-color: white;
+}
+
+/*Стили для скрытыя элемента начало*/
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+/*Стили для скрытыя элемента конец*/
+
+/*Секция с отзывами начало*/
+
+.comments {
+	overflow-y: scroll;
+	max-width: 600px;
+	width: 100%;
+	justify-self: center;
+	padding-top: 25px;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding-left: 0px;
+}
+
+.list__item {
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.item-wrap {
+	display: flex;
+	gap: 15px;
+	justify-content: space-between;
+	padding: 12px 15px;
+}
+
+.item__title {
+	display: flex;
+	flex-direction: column;
+	max-width: 485px;
+	width: 100%;
+	word-wrap: break-word;
+	gap: 8px;
+}
+
+.item__content {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	justify-content: space-between;
+}
+
+.item__content p {
+	text-align: end;
+	padding-right: 5px;
+}
+.img-delete {
+	width: 26px;
+	height: 20px;
+}
+
+.buttonContainer {
+	display: flex;
+	gap: 5px;
+	justify-content: end;
+}
+/*Секция с отзывами конец*/
+
+/*Форма отставить отзыв начало*/
+
+.form {
+	max-width: 600px;
+	width: 100%;
+	padding-bottom: 20px;
+	justify-self: center;
+	align-self: end;
+}
+
+.feedback-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	max-width: 710px;
+}
+
+.feedback-form__title {
+	font-weight: 700;
+}
+
+.feedback-form__field {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.feedback-form__findings {
+	display: flex;
+	gap: 40px;
+	height: 40px;
+}
+
+.findings__username {
+	width: 384px;
+	padding: 10px 20px;
+	border: 1px solid #888888;
+}
+
+.findings__date {
+	width: 175px;
+	padding: 10px 20px;
+	border: 1px solid #888888;
+}
+
+.text__review {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #888888;
+	padding: 10px 20px;
+	resize: none;
+}
+
+.findings__input:hover {
+	border: 1px solid black;
+}
+
+.findings__input:focus {
+	border: 1px solid black;
+}
+
+.findings__input.error {
+	border-color: #da4a0c;
+}
+
+.findings__wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.findings__error {
+	display: none;
+	padding: 8px 20px;
+	background-color: #da4a0c;
+	color: white;
+	font-size: 12px;
+	z-index: 1;
+}
+
+.findings__input.error ~ .findings__error {
+	display: block;
+}
+.btn_secondary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+	gap: 10px;
+	color: #ffffff;
+	background-color: #f36223;
+	border: none;
+}
+
+/*Форма оставить отзыв конец*/
