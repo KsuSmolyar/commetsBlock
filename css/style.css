@@ -1,19 +1,24 @@
 body {
 	background-color: #c2b9b9;
+	height: 100vh;
 }
 
 .bodyWrapper {
-	margin: 10px auto;
+	margin: 0 auto;
+	padding: 10px;
 	max-width: 1440px;
 	display: flex;
 	justify-content: center;
+	height: 100%;
 }
 
 .wrapper {
-	display: grid;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 30px;
-	grid-template-rows: 3fr 1fr;
-	height: 100vh;
+	height: 100%;
 	max-width: 800px;
 	width: 100%;
 	border-radius: 13px;
@@ -36,14 +41,17 @@ body {
 }
 /*Стили для скрытыя элемента конец*/
 
-/*Секция с отзывами начало*/
+/*Секция с комментариями начало*/
 
 .comments {
-	overflow-y: scroll;
+	background-color: #f8f6f6;
+	border-radius: 13px;
+	margin-top: 8px;
+	padding: 8px;
+	flex-grow: 1;
+	overflow-y: auto;
 	max-width: 600px;
 	width: 100%;
-	justify-self: center;
-	padding-top: 25px;
 }
 
 .list {
@@ -52,6 +60,7 @@ body {
 	flex-direction: column;
 	gap: 30px;
 	padding-left: 0px;
+	margin: 0;
 }
 
 .list__item {
@@ -69,17 +78,30 @@ body {
 .item__title {
 	display: flex;
 	flex-direction: column;
-	max-width: 485px;
+	max-width: 436px;
 	width: 100%;
 	word-wrap: break-word;
-	gap: 8px;
+	gap: 9px;
+}
+
+.titleName {
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.itemDate {
+	font-style: italic;
 }
 
 .item__content {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 9px;
 	justify-content: space-between;
+}
+
+.titleComment {
+	line-height: 16px;
 }
 
 .item__content p {
@@ -96,6 +118,14 @@ body {
 	gap: 5px;
 	justify-content: end;
 }
+
+.liked {
+	fill: #da4a0c;
+}
+
+.btn_like {
+	padding-top: 3px;
+}
 /*Секция с отзывами конец*/
 
 /*Форма отставить отзыв начало*/
@@ -104,8 +134,6 @@ body {
 	max-width: 600px;
 	width: 100%;
 	padding-bottom: 20px;
-	justify-self: center;
-	align-self: end;
 }
 
 .feedback-form {
