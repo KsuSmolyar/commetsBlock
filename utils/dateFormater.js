@@ -1,10 +1,15 @@
 "use strict";
 
+/**
+ * Форматирует дату
+ * @param {String} date
+ * @returns {String} отформатированная дата
+ */
 export function dateFormater(date) {
-	let dateNow = new Date(Date.now());
-	let dateComment = new Date(date);
-
-	let diff = dateComment.getDay() - dateNow.getDay();
+	const dateNow = new Date();
+	const dateComment = new Date(date);
+	const sameMonth = isSameMonth(dateNow, dateComment);
+	const sameYear = isSameYear(dateNow, dateComment);
 
 	const rtf = new Intl.RelativeTimeFormat("ru", { numeric: "auto" });
 	const time = new Intl.DateTimeFormat("ru", {
@@ -19,9 +24,19 @@ export function dateFormater(date) {
 		minute: "numeric",
 	});
 
-	if (diff == 0 || diff == -1) {
-		return `${rtf.format(diff, "day")}, ${time.format(dateComment)}`;
-	} else {
-		return fullDate.format(dateComment);
+	const diffDays = dateComment.getDate() - dateNow.getDate();
+
+	if (sameYear && sameMonth && (diffDays == 0 || diffDays == -1)) {
+		return `${rtf.format(diffDays, "day")}, ${time.format(dateComment)}`;
 	}
+
+	return fullDate.format(dateComment);
+}
+
+function isSameMonth(a, b) {
+	return a.getMonth() === b.getMonth();
+}
+
+function isSameYear(a, b) {
+	return a.getFullYear() === b.getFullYear();
 }
