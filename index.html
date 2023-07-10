@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CommentsBlock</title>
-		<link rel="stylesheet" href="./css/reset.css" />
-		<link rel="stylesheet" href="./css/style.css" />
-	</head>
-	<body>
-		<div class="bodyWrapper">
-			<div class="wrapper">
-				<section class="comments">
-					<ul class="list"></ul>
-				</section>
-				<!--Секция с формой отправки отзыва-->
-				<section class="form">
-					<form class="feedback-form" action="#">
-						<p class="feedback-form__title">Добавить комментарий</p>
-						<div class="feedback-form__field">
-							<div class="feedback-form__findings">
-								<div class="findings__wrapper">
-									<input
-										class="findings__username findings__input"
-										type="text"
-										name="username"
-										value=""
-										placeholder="Имя"
-									/>
-									<div class="findings__error"></div>
-								</div>
-								<div class="findings__wrapper">
-									<input
-										class="findings__date findings__input"
-										type="date"
-										name="date"
-										value=""
-										placeholder="Введите дату"
-									/>
-									<div class="findings__error"></div>
-								</div>
-							</div>
-							<div class="feedback-form__text">
-								<textarea
-									class="text__review findings__input"
-									name="review"
-									placeholder="Ваш комментарий"
-								></textarea>
-								<div class="findings__error"></div>
-							</div>
-							<div class="feedback-form__btn">
-								<button class="btn btn_secondary" type="submit">
-									Опубликовать комментарий
-								</button>
-							</div>
-						</div>
-					</form>
-				</section>
-			</div>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CommentsBlock</title>
+    <link
+      rel="shortcut icon"
+      href="./src/check.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="bodyWrapper">
+      <div class="wrapper">
+        <section class="comments">
+          <ul class="list"></ul>
+        </section>
+        <!--Секция с формой отправки отзыва-->
+        <section class="form">
+          <form class="feedback-form" action="#">
+            <p class="feedback-form__title">Добавить комментарий</p>
+            <div class="feedback-form__field">
+              <div class="feedback-form__findings">
+                <div class="findings__wrapper">
+                  <input
+                    class="findings__username findings__input"
+                    type="text"
+                    name="username"
+                    value=""
+                    placeholder="Имя"
+                  />
+                  <div class="findings__error"></div>
+                </div>
+                <div class="findings__wrapper">
+                  <input
+                    class="findings__date findings__input"
+                    type="date"
+                    name="date"
+                    value=""
+                    placeholder="Введите дату"
+                  />
+                  <div class="findings__error"></div>
+                </div>
+              </div>
+              <div class="feedback-form__text">
+                <textarea
+                  class="text__review findings__input"
+                  name="review"
+                  placeholder="Ваш комментарий"
+                ></textarea>
+                <div class="findings__error"></div>
+              </div>
+              <div class="feedback-form__btn">
+                <button class="btn btn_secondary" type="submit">
+                  Опубликовать комментарий
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
 
-		<script type="module" src="./index.js"></script>
-	</body>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

@@ -21,7 +21,7 @@ const list = document.querySelector(".list");
 let publishedComments = [];
 
 /**
- *Создает элемент разметки HTML
+ * Создает элемент разметки HTML
  * @param {Comment} объект комментария
  * @returns {Node} элемент разметки HTML
  */
